@@ -27,6 +27,14 @@ div {
     border: 3px solid blue;
 }
 
-#horizontal-div {
+#sketch-grid {
+    margin: auto;
     display: flex;
+    flex-direction: column;
+    width: 960px;
+    height: 500px;
+}
+
+.horizontal-div {
+    flex: 1;
 }
