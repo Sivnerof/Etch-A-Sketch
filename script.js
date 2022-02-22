@@ -15,11 +15,24 @@ function createGrid(num=16){
             col_Div.classList.add('col-div');
             row_Div.appendChild(col_Div);
         }
+
+        if (i == num - 1){
+            createTrail();
+        }
     }
 }
 
 function deleteGrid(){
     document.querySelectorAll('.row-div').forEach(e => e.remove());
+}
+
+function createTrail (){
+    const trail_Divs = document.querySelectorAll(".col-div");
+    trail_Divs.forEach((e) => {
+        e.addEventListener('mouseover', () => {
+            e.classList.add('black-trail');
+        });
+    });
 }
 
 /* Run Program For First Time Page Load */
