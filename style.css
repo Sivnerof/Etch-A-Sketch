@@ -7,8 +7,9 @@
 }
 
 body {
-    min-height: 100vh;
     display: flex;
+    min-height: 100vh;
+    background-color: antiquewhite;
     border: 3px solid green;
 }
 
@@ -18,11 +19,9 @@ h1 {
     padding: 25px;
 }
 
-div {
-    border: 3px solid red;
-}
-
 #container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     border: 3px solid blue;
 }
@@ -33,5 +32,21 @@ div {
     flex-direction: column;
     width: 960px;
     height: 500px;
+    background-color: #B8B8B8;
+    border: 1px solid #B8191E;
 }
 
+.row-div {
+    display: flex;
+    flex: 1;
+}
+
+.col-div {
+    display: flex;
+    flex: 1;
+    border: 1px solid #B8191E;;
+}
+
+.col-div:hover {
+    background-color: black;
+}
