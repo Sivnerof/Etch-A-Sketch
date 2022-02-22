@@ -1,6 +1,9 @@
 /* Grab Elements */
+resetButton = document.querySelector('#reset-button');
 
-function originalGrid(num=16){
+function createGrid(num=16){
+    num = num > 100 || num < 16 ? 16 : num;
+
     for (let i = 0; i < num; i++){
         const sixteenGrid = document.querySelector('#sketch-grid');
         const div = document.createElement('div');
@@ -10,4 +13,10 @@ function originalGrid(num=16){
     }
 }
 
-originalGrid();
+createGrid();
+
+resetButton.addEventListener('click', () => {
+   gridSize = +(window.prompt('Enter Grid Size: '));
+   /* Delete original grid */
+   createGrid(gridSize); 
+});
