@@ -1,7 +1,32 @@
-div {
-    border: 1px solid red;
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.horizontal-div {
-    display: inline-block;
+body {
+    min-height: 100vh;
+    display: flex;
+    border: 3px solid green;
+}
+
+h1 {
+    font-family: 'Shizuru', cursive;
+    text-align: center;
+    padding: 25px;
+}
+
+div {
+    border: 3px solid red;
+}
+
+#container {
+    width: 100%;
+    border: 3px solid blue;
+}
+
+#horizontal-div {
+    display: flex;
 }
