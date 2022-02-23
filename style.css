@@ -4,6 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --etch_red: #B8191E;
+    --playful_font: 'Shizuru', cursive;
+    --etch-height: 500px;
+    --etch-width: 960px;
+    --etch-center: 0 auto;
 }
 
 body {
@@ -13,13 +18,13 @@ body {
 }
 
 h1 {
-    font-family: 'Shizuru', cursive;
+    font-family: var(--playful_font);
     text-align: center;
     padding: 25px;
 }
 
 h2 {
-    font-family: 'Shizuru', cursive;
+    font-family: var(--playful_font);
     color: gold;
 }
 
@@ -35,30 +40,30 @@ input, button {
 
 #sketch-top {
     display: flex;
-    margin: 0 auto;
-    width: 960px;
-    border: 25px solid #B8191E;
+    margin: var(--etch-center);
+    width: var(--etch-width);
+    border: 25px solid var(--etch_red);
     border-radius: 40px 40px 0 0;
 }
 
 #sketch-grid {
-    margin: 0 auto;
+    margin: var(--etch-center);
     display: flex;
     flex-direction: column;
-    width: 960px;
-    height: 500px;
+    width: var(--etch-width);
+    height: var(--etch-height);
     background-color: #B8B8B8;
-    border-left: 50px solid #B8191E;
-    border-right: 50px solid #B8191E;
+    border-left: 50px solid var(--etch_red);
+    border-right: 50px solid var(--etch_red);
 }
 
 #sketch-bottom {
     display: flex;
     justify-content: space-around;
-    margin: 0 auto;
-    width: 960px;
+    margin: var(--etch-center);
+    width: var(--etch-width);
     padding: 20px;
-    background-color: #B8191E;
+    background-color: var(--etch_red);
     border-radius: 0px 0px 40px 40px;
 }
 

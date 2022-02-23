@@ -1,10 +1,11 @@
 /* Grab Elements */
 const resetButton = document.querySelector('#reset-button');
+const rainbowButton = document.querySelector('#rainbow-button');
 const grid_Div = document.querySelector('#sketch-grid');
 const form = document.querySelector('form');
 
 /* Functions */
-function createGrid(num=16){
+function createGrid(num=16, rainbow=false){
     num = num > 100 || num < 16 ? 16 : num;
     for (let i = 0; i < num; i++){
         const row_Div = document.createElement('div');
@@ -18,7 +19,7 @@ function createGrid(num=16){
         }
 
         if (i == num - 1){
-            createTrail();
+            createTrail(rainbow);
         }
     }
 }
@@ -29,22 +30,30 @@ function deleteGrid(){
     createGrid(gridSize);
 }
 
-function createTrail (){
+function createTrail (rainbow){
     const trail_Divs = document.querySelectorAll(".col-div");
-    const trail_Color = document.querySelector('#trail-color').value;
-    const shading = document.querySelector('input[name="trail-shade"]:checked').value;
-    trail_Divs.forEach((e) => {
-        e.addEventListener('mouseover', () => {
-            if (shading == "on"){
-                if(e.classList.contains('shaded-trail')){
-                    e.style.opacity -= -0.1
-                } else {
-                    e.className += ' shaded-trail';
-                }
-            }
-            e.style.backgroundColor = `${trail_Color}`;
+    if (rainbow){
+        trail_Divs.forEach((e) => {
+            e.addEventListener('mouseover', () => {
+                e.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+            });
         });
-    });
+    } else {
+        const trail_Color = document.querySelector('#trail-color').value;
+        const shading = document.querySelector('input[name="trail-shade"]:checked').value;
+        trail_Divs.forEach((e) => {
+            e.addEventListener('mouseover', () => {
+                if (shading == "on"){
+                    if(e.classList.contains('shaded-trail')){
+                        e.style.opacity -= -0.1
+                    } else {
+                        e.className += ' shaded-trail';
+                    }
+                }
+                e.style.backgroundColor = `${trail_Color}`;
+            });
+        });
+    }
 }
 
 /* Run Program For First Time Page Load */
@@ -58,4 +67,9 @@ resetButton.addEventListener('click', () => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     deleteGrid();
+});
+
+rainbowButton.addEventListener('click', () => {
+    document.querySelectorAll('.row-div').forEach(e => e.remove());
+    createGrid(100, true);
 });
