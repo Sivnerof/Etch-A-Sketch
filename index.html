@@ -26,9 +26,10 @@
             <form action="">
                 <label for="trail-color">Color: </label>
                 <input type="color" id="trail-color" name="trail-color" value="#000000">
-                <label for="trail-shade">Shading: </label>
-                <input type="hidden" name="trail-shade" value="0">
-                <input type="checkbox" id="trail-shade" name="trail-shade" value="1">
+                <input type="radio" class="shade-buttons" name="trail-shade" value="off" checked>
+                <label for="no-shade">Off</label>
+                <input type="radio" class="shade-buttons" name="trail-shade" value="on">
+                <label for="no-shade">On</label>
                 <input type="submit" id="options-button" value="Submit">
             </form>
         </div>

@@ -80,6 +80,6 @@ input, button {
     flex: 1;
 }
 
-.col-div:hover {
-    background-color: black;
+.shaded-trail {
+    opacity: 0.1;
 }

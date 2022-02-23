@@ -32,8 +32,16 @@ function deleteGrid(){
 function createTrail (){
     const trail_Divs = document.querySelectorAll(".col-div");
     const trail_Color = document.querySelector('#trail-color').value;
+    const shading = document.querySelector('input[name="trail-shade"]:checked').value;
     trail_Divs.forEach((e) => {
         e.addEventListener('mouseover', () => {
+            if (shading == "on"){
+                if(e.classList.contains('shaded-trail')){
+                    e.style.opacity -= -0.1
+                } else {
+                    e.className += ' shaded-trail';
+                }
+            }
             e.style.backgroundColor = `${trail_Color}`;
         });
     });
