@@ -21,15 +21,22 @@
             <h2>Etch-A-Sketch</h2>
             <button id="rainbow-button">Rainbow</button>
         </div>
-        <div id="option-buttons">
-            <form action="">
-                <label for="trail-color">Color: </label>
-                <input type="color" id="trail-color" name="trail-color" value="#000000">
-                <input type="radio" class="shade-buttons" name="trail-shade" value="off" checked>
-                <label for="no-shade">Off</label>
-                <input type="radio" class="shade-buttons" name="trail-shade" value="on">
-                <label for="no-shade">On</label>
-                <input type="submit" id="options-button" value="Submit">
+        <div id="option-div">
+            <form id="option-form" action="">
+                <div>
+                    <label for="trail-color">Color: </label>
+                    <input type="color" id="trail-color" name="trail-color" value="#000000">
+                </div>
+                <div>
+                    <span>Shading: </span>
+                    <input type="radio" class="shade-buttons" name="trail-shade" value="off" checked>
+                    <label for="no-shade">Off</label>
+                    <input type="radio" class="shade-buttons" name="trail-shade" value="on">
+                    <label for="no-shade">On</label>
+                </div>
+                <div>
+                    <input type="submit" id="options-button" value="Submit">
+                </div>
             </form>
         </div>
     </div>

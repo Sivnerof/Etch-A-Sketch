@@ -73,6 +73,34 @@ input, button {
     width: 60px;
     border-style: outset;
     border-radius: 50%;
+    font-family: var(--playful_font);
+    font-weight: bold;
+}
+
+#option-div {
+    display: flex;
+}
+
+#option-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+    width: 100%;
+    font-family: var(--playful_font);
+    font-weight: bold;
+}
+
+#options-button {
+    font-family: var(--playful_font);
+    font-weight: bold;
+    background-color: antiquewhite;
+    border: 3px solid #383838;
+    border-radius: 5px;
+    color: black;
+    height: 30px;
+    width: 70px;
 }
 
 .row-div {
