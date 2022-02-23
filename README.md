@@ -13,4 +13,4 @@ View my [Finished Implementation](https://sivnerof.github.io/Etch-A-Sketch/ "My 
 ## Attributions
 
 * Etch-A-Sketch Images:
-    * [Creaticca Creative Agency - Flaticon]("https://www.flaticon.com/free-icons/etch-a-sketch" "Flaticon.com")
+    * [Creaticca Creative Agency - Flaticon](https://www.flaticon.com/free-icons/etch-a-sketch "Flaticon.com")
