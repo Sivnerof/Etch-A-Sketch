@@ -23,6 +23,10 @@ h2 {
     color: gold;
 }
 
+input, button {
+    cursor: pointer;
+}
+
 #container {
     display: flex;
     flex-direction: column;
@@ -77,9 +81,5 @@ h2 {
 }
 
 .col-div:hover {
-    background-color: black;
-}
-
-.black-trail {
     background-color: black;
 }

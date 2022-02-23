@@ -22,9 +22,15 @@
             <h2>Etch-A-Sketch</h2>
             <button id="rainbow-button">Rainbow</button>
         </div>
-        <div class="option-buttons">
-            <button>Color</button>
-            <button>Shade</button>
+        <div id="option-buttons">
+            <form action="">
+                <label for="trail-color">Color: </label>
+                <input type="color" id="trail-color" name="trail-color" value="#000000">
+                <label for="trail-shade">Shading: </label>
+                <input type="hidden" name="trail-shade" value="0">
+                <input type="checkbox" id="trail-shade" name="trail-shade" value="1">
+                <input type="submit" id="options-button" value="Submit">
+            </form>
         </div>
     </div>
 </body>
@@ -34,19 +40,3 @@
 -->
 
 </html>
-
-<!--
-Set up a “hover” effect so that the grid divs change color when your mouse passes over them, 
-leaving a (pixelated) trail through your grid like a pen would.
-
-    Hint: “Hovering” is what happens when your mouse enters a div and ends when your mouse leaves it. 
-    You can set up event listeners for either of those events as a starting point.
-    There are multiple ways to change the color of the divs, including:
-        adding a new class to the div.
-        changing the div’s background color using JavaScript.
-
-(Optional): Instead of just changing the color of a square from black to white (for example), 
-have each pass through with the mouse change it to a completely random RGB value. 
-Then try having each pass just add another 10% of black to it so that only after 10 passes 
-is the square completely black.
--->

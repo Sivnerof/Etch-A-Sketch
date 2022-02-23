@@ -1,6 +1,7 @@
 /* Grab Elements */
 const resetButton = document.querySelector('#reset-button');
 const grid_Div = document.querySelector('#sketch-grid');
+const form = document.querySelector('form');
 
 /* Functions */
 function createGrid(num=16){
@@ -23,14 +24,17 @@ function createGrid(num=16){
 }
 
 function deleteGrid(){
+    const gridSize = +(window.prompt('Enter Grid Size: '));
     document.querySelectorAll('.row-div').forEach(e => e.remove());
+    createGrid(gridSize);
 }
 
 function createTrail (){
     const trail_Divs = document.querySelectorAll(".col-div");
+    const trail_Color = document.querySelector('#trail-color').value;
     trail_Divs.forEach((e) => {
         e.addEventListener('mouseover', () => {
-            e.classList.add('black-trail');
+            e.style.backgroundColor = `${trail_Color}`;
         });
     });
 }
@@ -40,7 +44,10 @@ createGrid();
 
 /* Event Listeners */
 resetButton.addEventListener('click', () => {
-   gridSize = +(window.prompt('Enter Grid Size: '));
    deleteGrid();
-   createGrid(gridSize); 
+});
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    deleteGrid();
 });
